@@ -3,7 +3,8 @@
 }
 
 body {
-    font-family: Verdana, sans-serif; /* Cambiamos la fuente a Verdana */
+    font-family: Verdana, sans-serif;
+    /* Cambiamos la fuente a Verdana */
 }
 
 a {
@@ -15,10 +16,31 @@ div {
     width: fit-content;
 }
 
-.danger {}
+.danger {
+    background-color: #ffdddd; /* Rojo claro */
+    border-left: 8px solid #f44336; /* Rojo */
+}
 
-.success {}
+.success {
+    background-color: #ddffdd; /* Verde claro */
+    border-left: 8px solid #4CAF50; /* Verde */
+}
 
-.info {}
+.info {
+    background-color: #e7f3fe; /* Azul claro */
+    border-left: 8px solid #2196F3; /* Azul */
+}
 
-.warning {}
+.warning {
+    background-color: #fff3cd; /* Amarillo claro */
+    border-left: 8px solid #ff9800; /* Naranja */
+}
+
+.danger,
+.success,
+.info,
+.warning {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    padding: 15px; /* Espacio interno */
+    margin-bottom: 20px; /* Espacio entre cajas */
+}
