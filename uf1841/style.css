@@ -36,11 +36,19 @@ div {
     border-left: 8px solid #ff9800; /* Naranja */
 }
 
-.danger,
-.success,
-.info,
-.warning {
+.danger, .success, .info, .warning {
     font-size: 1.2rem; /* Tamaño de fuente */
     padding: 15px; /* Espacio interno */
     margin-bottom: 20px; /* Espacio entre cajas */
+}
+
+.warning {
+    position: relative; /* Nos permite posicionar el icono de forma absoluta dentro del contenedor */
+}
+
+.warning__icon {
+    width: 25px;
+    position: absolute; /* Posicionamiento absoluto respecto al contenedor .warning*/
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
 }
