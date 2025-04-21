@@ -23,7 +23,7 @@ div {
 
 .success {
     background-color: #ddffdd; /* Verde claro */
-    border-left: 8px solid #4CAF50; /* Verde */
+    border-left: 8px solid #04AA6D; /* Verde */
 }
 
 .info {
@@ -32,8 +32,8 @@ div {
 }
 
 .warning {
-    background-color: #fff3cd; /* Amarillo claro */
-    border-left: 8px solid #ff9800; /* Naranja */
+    background-color: #ffffcc; /* Amarillo claro */
+    border-left: 8px solid #ffeb3b; /* Naranja */
 }
 
 .danger, .success, .info, .warning {
@@ -49,6 +49,6 @@ div {
 .warning__icon {
     width: 25px;
     position: absolute; /* Posicionamiento absoluto respecto al contenedor .warning*/
-    top: 10px; /* Distancia desde arriba */
-    right: 10px; /* Distancia desde la derecha */
+    top: -10px; /* Distancia desde arriba */
+    right: -10px; /* Distancia desde la derecha */
 }
