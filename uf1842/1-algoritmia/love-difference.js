@@ -6,6 +6,7 @@
  * @return {number} La diferencia de edad, siempre un número positivo
  */
 
+/* 
 function loveDifference(age1, age2) {
 
     // Primero calculamos la diferencia sin importar el orden
@@ -19,6 +20,14 @@ function loveDifference(age1, age2) {
     // Retornamos la diferencia siempre positiva
     return diferencia;
 }
+ */
+
+// BONUS:
+
+function loveDifference(age1, age2) {
+    return Math.abs(age1 - age2); // El método Math.abs convierte cualquier resultado negativo a positivo
+}
+
 
 // Prueba 1: Diferencia básica
 console.log(loveDifference(25, 20)); // Resultado esperado: 5
@@ -33,3 +42,5 @@ console.log(loveDifference(30, 30)); // Resultado esperado: 0
 console.log(loveDifference(100, 80)); // Resultado esperado: 20
 
 // BONUS: Implementa la función en una sola línea
+
+
