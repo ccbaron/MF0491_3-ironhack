@@ -21,6 +21,8 @@ body {
     border-bottom: 4px solid #fdb347;
 }
 
+/* GALERIA */
+
 .gallery {
     margin: 0 auto;
     padding: 20px 10px;
@@ -39,16 +41,10 @@ body {
     border-radius: 10px;
 }
 
-@media (min-width: 768px) {
-    .gallery {
-        flex-direction: row;
-    }
-}
-
 /* MEDIA QUERIES PARA DISEÑO RESPONSIVE */
 
 /* Disposición horizontal cuando hay espacio */
-/* Imagen de fondo en pantallas con más de 768px */
+/* Imagen de fondo en pantallas con más de 768px (Tablet)*/
 
 @media (min-width: 768px) {
     body {
@@ -59,17 +55,23 @@ body {
     
     .gallery {
         flex-direction: row; /* Disposición horizontal */
-        flex-wrap: wrap; /* Envuelve cuando no cabe */
+        flex-wrap: wrap; /* Se envuelve cuando no tiene espacio */
     }
 }
 
-/* Grid de 3 columnas en pantallas con más de 992px */
+/* Grid de 3 columnas en pantallas con más de 992px (Desktop) */
 @media (min-width: 992px) {
     .gallery {
         display: grid; /* Cambia a Grid */
-        /* Grid con primera columna 3 veces más ancha */
-        grid-template-columns: 3fr 1fr 1fr;
-        /* Mantiene la separación consistente */
-        gap: 1rem;
+        grid-template-columns: 3fr 1fr 1fr; /* Grid con primera columna 3 veces más ancha */
+        gap: 1rem; /* Añadimos separación */
+    }
+
+    .gallery img {
+        max-width: none; /* Eliminamos max-width para que respete el grid */
+        width: 100%; /* Ocupa todo el espacio de la celda */
+        height: 100%; /* Ajustamos altura para mantener proporciones */
+        min-height: 300px; /* Altura mínima */
+        object-fit: cover; /* Mantiene relación de aspecto */
     }
 }
