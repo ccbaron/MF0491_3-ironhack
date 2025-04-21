@@ -8,6 +8,16 @@
 
 function loveDifference(age1, age2) {
 
+    // Primero calculamos la diferencia sin importar el orden
+    let diferencia = age1 - age2;
+
+    // Si la diferencia es negativa, la convertimos a positiva
+    if (diferencia < 0) {
+        diferencia = -diferencia; // Usamos el operador unario (-) para cambiar del signo el valor. Esto es lo mismo que diferencia * -1
+    }
+
+    // Retornamos la diferencia siempre positiva
+    return diferencia;
 }
 
 // Prueba 1: Diferencia básica
