@@ -15,15 +15,20 @@ body {
 .header {
     text-align: center;
     text-transform: uppercase;
-    padding: 32px;
-    background-color: #d5d5df;
-    color: #fff;
+    padding: 1rem;
+    background-color: #0B103D; /* Azul más oscuro */
+    color: #ffffff; /* Texto blanco */
     border-bottom: 4px solid #fdb347;
 }
 
 .gallery {
     margin: 0 auto;
     padding: 20px 10px;
+    display: flex; /* Activamos Flexbox*/
+    flex-direction: column; /* Apilamiento vertical en móvil */
+    gap: 1rem; /* Añadimos un gap para separar los elementos*/
+    justify-content: center; /* Centramos los elementos */
+    align-items: center; /* Añadido para centrar verticalmente */
 }
 
 .gallery img {
@@ -32,4 +37,39 @@ body {
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        flex-direction: row;
+    }
+}
+
+/* MEDIA QUERIES PARA DISEÑO RESPONSIVE */
+
+/* Disposición horizontal cuando hay espacio */
+/* Imagen de fondo en pantallas con más de 768px */
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('raspitas.jpg');
+        background-size: cover; /* Cubre todo el fondo */
+        background-attachment: fixed;
+    }
+    
+    .gallery {
+        flex-direction: row; /* Disposición horizontal */
+        flex-wrap: wrap; /* Envuelve cuando no cabe */
+    }
+}
+
+/* Grid de 3 columnas en pantallas con más de 992px */
+@media (min-width: 992px) {
+    .gallery {
+        display: grid; /* Cambia a Grid */
+        /* Grid con primera columna 3 veces más ancha */
+        grid-template-columns: 3fr 1fr 1fr;
+        /* Mantiene la separación consistente */
+        gap: 1rem;
+    }
 }
